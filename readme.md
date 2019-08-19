@@ -35,7 +35,14 @@ required packages: `@typescript-eslint/parser @typescript-eslint/eslint-plugin e
 ### `cimpress-atsquad/vue`
 Add this module if you are writing a vue project. This will set the appropriate parser and parser settings for a vue project.
 
-The vue cli will include the appropriate packages (`@vue/cli-plugin-eslint`)
+required packages: `@vue/cli-plugin-eslint`
+
+### `cimpress-atsquad/react`
+Add this module if you are writing a react project. This will enable the jsx feature in parser options.
+
+This module also includes accessability rules from the [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) plugin.
+
+required packages: `eslint-plugin-react eslint-plugin-jsx-a11y`
 
 ### `cimpress-atsquad/jest`
 Add this module if you are working with jest for unit testing.
@@ -58,9 +65,9 @@ required packages: `eslint-plugin-mocha eslint-plugin-node eslint-plugin-promise
 
 As written in the above module, after upgrading to 2.0 you have to install all required packages explicitly
 
-```
+```bash
 yarn install -D eslint eslint-plugin-mocha eslint-plugin-node eslint-plugin-promise
-``` 
+```
 
 and change your `.eslintrc` file to extend `cimpress-atsquad/legacy` instead of just `cimpress-atsquad`
 
